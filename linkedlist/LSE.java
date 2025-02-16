@@ -34,6 +34,26 @@ public class LSE<T>{ // * parametro genererico para que qualquer tipo de dado po
             this.tail = newNode; // o tail agora é o novo nó
         }
         this.size++; // incrementa-se o tamanho
+    }
 
+    public T search(T value){
+        LSENode<T> current = this.head;
+
+        do{
+            if(current.getInfo().equals(value)){
+                System.out.println(current);
+                return current.getInfo();
+            }
+            current = current.getNext();
+        }while(current.getNext() != null);
+        return null;
+    }
+
+    public void deleteEnd(T value){
+        LSENode<T> current = this.head;
+
+        if(current.getInfo().equals(value)){
+
+        }
     }
 }
